@@ -6,7 +6,73 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-white: #fff;
+    --primary-gray: #f4f4f4;
+    --primary-blue: #17405c;
+    --secondary-blue: #337ab7;
+    --primary-black: #4a4a4a;
+    --primary-red: #a04747;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #565454;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--primary-white);
+    display: grid;
+    place-content: center;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    opacity: 90%;
+}
+
+.banner .logo {
+    position: absolute;
+    z-index: 999;
+    top: -1em;
+    right: 0;
+    width: 30%;
+}
+
+.container {
+    display: grid;
+    grid-gap: 1em;
+    text-align: center;
+    padding: 1em;
+    background-color: var(--secondary-gray);
+}
+
+.flight-title,
+.flight-info {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: var(--primary-white);
+    gap: 1em;
+    padding: 1.5em 1em;
+    border-radius: 8px;
+    box-shadow:
+        rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.flight-title {
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    font-weight: 800;
+}
+
+.flight-info {
+    color: var(--primary-blue);
+    font-weight: 600;
+    transition: 300ms;
+}
+
+.flight-info:hover {
+    background: var(--primary-gray);
 }
