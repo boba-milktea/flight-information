@@ -6,5 +6,7 @@
 
 export const sortFlights = (arr = []) =>
     [...arr].sort(
-        (a, b) => new Date(a.departureDate) - new Date(b.departureDate)
+        (a, b) =>
+            new Date(a.departureDate).getTime() -
+            new Date(b.departureDate).getTime()
     );
